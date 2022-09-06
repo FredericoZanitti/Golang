@@ -34,4 +34,24 @@ func main() {
 	slice2 := array2[1:3]
 	fmt.Println(slice2)
 
+	//arrays internos
+	slice3 := make([]float32, 10, 15)
+	fmt.Println(slice3)
+	fmt.Println(len(slice3)) //tamanho
+	fmt.Println(cap(slice3)) //capacidade
+	//criou um array de 15 posições e o slice retornou as 10 primeiras posições desse array
+
+	slice4 := make([]float32, 10, 11)
+	fmt.Println(slice4)
+	slice4 = append(slice4, 5)
+	slice4 = append(slice4, 6)
+	fmt.Println(len(slice4)) //tamanho
+	fmt.Println(cap(slice4)) //capacidade
+	//a capacidade é 11, mas quando estouramos a sua capacidade, o Go cria um novo array
+	//dobrando sua capacidade
+
+	//resumindo
+	//array => uma lista COM tamanho fixo
+	//slice => uma lista SEM tamanho fixo
+
 }
