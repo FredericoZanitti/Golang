@@ -22,4 +22,20 @@ func TipoDeEndereco(endereco string) string {
 
 	return "Tipo Inválido"
 
+	// rodar teste em todas as pastas do pacote
+	// digite go test ./...
+
+	// rodar teste com mais especificações
+	// digite go test -v
+
+	// saber quantos % das funções estão sendo cobertas pelo teste
+	// digite go test -cover
+
+	// criar um arquivo txt com o resultado do teste
+	// go test --coverprofile cobertura.txt
+
+	// saber exatamente a linha/função onde o teste não cobriu 100%
+	// digite go tool cover --func=cobertura.txt
+	//        go tool cover --html=cobertura.txt
+
 }
