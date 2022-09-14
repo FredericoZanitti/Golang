@@ -19,8 +19,8 @@ func main() {
 	templates = template.Must(template.ParseGlob("*.html"))
 
 	http.HandleFunc("/home", func(w http.ResponseWriter, r *http.Request) {
-		u := usuario{"Maria", "maria@gmail.com"}
-		templates.ExecuteTemplate(w, "home.html", nil)
+		u := usuario{"Maria", "joao.pedro@gmail.com"}
+		templates.ExecuteTemplate(w, "home.html", u)
 	})
 
 	fmt.Println("Escutando na porta 5000")

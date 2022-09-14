@@ -5,14 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
+
+    <!-- Formatação CSS forma 1 -->
+    <style>
+        h2 {
+            color: brown; 
+            font-size: 30px; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        marquee {
+            color: blue;
+        }
+    </style>
+
 </head>
 <body>
-    <h2>PÁGINA PRINCIPAL</h2>
+    <!-- Formatação CSS forma 2 -->
+    <h2 style="color:brown; font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        PÁGINA PRINCIPAL
+    </h2>
     <marquee behavior="" direction="">
         <!-- quando usamos {{ }} é como se informássemos ao Go que o que está dentro dos parêntesis
         é uma variável -->
         <h4> Seja bem vindo, {{ .Nome }} </h4>
     </marquee>
+
+    <button id="botaoHTML">Clique em mim!</button>
+
+    <script>
+        var botao = document.getElementById("botaoHTML")
+        botao.onclick = function(){
+            alert("Botão clicado com sucesso!")
+        }
+    </script>
     
 </body>
 </html>
